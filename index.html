@@ -143,7 +143,91 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="introduction">Introduction</h1>
+                                <h1 id="wiki-tech">Wiki Tech</h1>
+<p>Knowledge base created with <a href="https://www.gitbook.com/" target="_blank">GitBook</a> and host on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a> with <a href="https://gulpjs.com/" target="_blank">Gulp</a></p>
+<p>Browse Wiki Tech <a href="https://charlesbdt.github.io/wiki-tech/" target="_blank">here</a></p>
+<h2 id="installation">Installation</h2>
+<pre><code class="lang-sh"><span class="hljs-comment"># If you don&apos;t have GitBook CLI</span>
+npm install -g gitbook-cli
+
+<span class="hljs-comment"># Run the project</span>
+gitbook serve
+</code></pre>
+<p><strong>N.B</strong> : You can run the project on every branches created but not on <code>gh-pages</code>.</p>
+<blockquote>
+<p>Gulp self-run this branch to serve this GitBook on GitHub pages.</p>
+</blockquote>
+<hr>
+<h2 id="how-to-serve-gitbook-on-github-pages-with-gulp">How to serve GitBook on GitHub Pages with Gulp</h2>
+<h3 id="gitbook">GitBook</h3>
+<pre><code class="lang-sh"><span class="hljs-comment"># Install GitBook CLI</span>
+npm install -g gitbook-cli
+
+<span class="hljs-comment"># Create a GitBook in your repository</span>
+gitbook init
+
+<span class="hljs-comment"># Test it</span>
+gitbook serve
+</code></pre>
+<h3 id="github">GitHub</h3>
+<p>Set your current directory as a repository following GitHub basic setup</p>
+<pre><code class="lang-sh"><span class="hljs-comment"># After pushing your modification to your main branch (master by default)</span>
+<span class="hljs-comment"># Create and push this new branch to publish your site</span>
+git checkout -b gh-pages
+git push -u origin gh-pages
+
+<span class="hljs-comment"># Back to master branch for the next steps</span>
+git checkout master
+</code></pre>
+<h3 id="gulp-task-to-publish">Gulp task to publish</h3>
+<p>Prerequisite install</p>
+<pre><code class="lang-sh"><span class="hljs-comment"># If you don&apos;t have gulp</span>
+npm install -g gulp
+
+<span class="hljs-comment"># If you don&apos;t have yarn</span>
+npm install -g yarn
+</code></pre>
+<p>Main install</p>
+<pre><code class="lang-sh"><span class="hljs-comment"># Create a package.json with yarn</span>
+yarn init
+
+<span class="hljs-comment"># Add the following required dependencies</span>
+yarn add gulp gulp-gh-pages gulp-load-plugins --dev
+</code></pre>
+<p>Create a <code>gulpfile.js</code> in your root directory</p>
+<pre><code class="lang-js"><span class="hljs-comment">// ~/gulpfile.js</span>
+<span class="hljs-keyword">const</span> gulp = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gulp&apos;</span>);
+<span class="hljs-keyword">const</span> gulpLoadPlugins = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gulp-load-plugins&apos;</span>);
+
+<span class="hljs-keyword">const</span> $ = gulpLoadPlugins();
+
+<span class="hljs-comment">// Publishes the site to GitHub Pages</span>
+gulp.task(<span class="hljs-string">&apos;deploy&apos;</span>, () =&gt; {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Publishing to GH Pages&apos;</span>);
+  <span class="hljs-keyword">return</span> gulp.src(<span class="hljs-string">&apos;./_book/**/*&apos;</span>)
+    .pipe($.ghPages({
+      origin: <span class="hljs-string">&apos;origin&apos;</span>,
+      <span class="hljs-comment">// Branch to deploy on</span>
+      <span class="hljs-comment">// Change to &quot;master&quot; for username.github.io projects</span>
+      branch: <span class="hljs-string">&apos;gh-pages&apos;</span>
+      <span class="hljs-comment">// More options at https://www.npmjs.com/package/gulp-gh-pages</span>
+    }));
+});
+</code></pre>
+<h3 id="last-steps">Last steps</h3>
+<pre><code class="lang-sh"><span class="hljs-comment"># Run locally</span>
+gitbook server
+
+<span class="hljs-comment"># Or create the build</span>
+gitbook build
+
+<span class="hljs-comment"># Both will make sure that the _books folder is updated</span>
+
+<span class="hljs-comment"># Publish it online</span>
+gulp deploy
+
+<span class="hljs-comment"># Check it online at https://&lt;github_username&gt;.github.io/&lt;repository_name&gt;</span>
+</code></pre>
 
                                 
                                 </section>
@@ -179,7 +263,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2020-03-21T17:44:25.763Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-21T17:55:35.988Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2020-03-21T20:32:55.903Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-21T20:35:01.713Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
