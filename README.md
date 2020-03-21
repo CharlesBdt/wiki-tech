@@ -2,7 +2,7 @@
 
 Knowledge base created with [GitBook](https://www.gitbook.com/) and host on [GitHub Pages](https://pages.github.com/) with [Gulp](https://gulpjs.com/)
 
-Browse Wiki Tech [here](https://charlesbdt.github.io/wiki-tech/)
+Browse Wiki Tech [website](https://charlesbdt.github.io/wiki-tech/) or [repository](https://github.com/CharlesBdt/wiki-tech)
 
 ## Installation
 
@@ -95,7 +95,6 @@ gulp.task('deploy', () => {
 
 ### Last steps
 
-
 ```sh
 # Run locally
 gitbook server
@@ -107,6 +106,12 @@ gitbook build
 
 # Publish it online
 gulp deploy
+
+# It will automatically push the GitBook build to the gh_pages branch based on your current local active branch
+# So don't forger to commit and push your files to your remote branch as well
+git add .
+git commit -m <commit_message>
+git push origin <current_branch_name>
 
 # Check it online at https://<github_username>.github.io/<repository_name>
 
