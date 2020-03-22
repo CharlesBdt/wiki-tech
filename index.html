@@ -57,6 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="pages/IDE/" />
+    
     
 
     </head>
@@ -95,6 +97,38 @@
                 </a>
             
 
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="pages/IDE/">
+            
+                <a href="pages/IDE/">
+            
+                    
+                    IDE
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="pages/IDE/VSCode.html">
+            
+                <a href="pages/IDE/VSCode.html">
+            
+                    
+                    VS Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -145,7 +179,7 @@
                                 
                                 <h1 id="wiki-tech">Wiki Tech</h1>
 <p>Knowledge base created with <a href="https://www.gitbook.com/" target="_blank">GitBook</a> and host on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a> with <a href="https://gulpjs.com/" target="_blank">Gulp</a></p>
-<p>Browse Wiki Tech <a href="https://charlesbdt.github.io/wiki-tech/" target="_blank">here</a></p>
+<p>Browse Wiki Tech <a href="https://charlesbdt.github.io/wiki-tech/" target="_blank">website</a> or <a href="https://github.com/CharlesBdt/wiki-tech" target="_blank">repository</a></p>
 <h2 id="installation">Installation</h2>
 <pre><code class="lang-sh"><span class="hljs-comment"># If you don&apos;t have GitBook CLI</span>
 npm install -g gitbook-cli
@@ -226,6 +260,12 @@ gitbook build
 <span class="hljs-comment"># Publish it online</span>
 gulp deploy
 
+<span class="hljs-comment"># It will automatically push the GitBook build to the gh_pages branch based on your current local active branch</span>
+<span class="hljs-comment"># So don&apos;t forger to commit and push your files to your remote branch as well</span>
+git add .
+git commit -m &lt;commit_message&gt;
+git push origin &lt;current_branch_name&gt;
+
 <span class="hljs-comment"># Check it online at https://&lt;github_username&gt;.github.io/&lt;repository_name&gt;</span>
 </code></pre>
 
@@ -256,6 +296,10 @@ gulp deploy
             
                 
                 
+                <a href="pages/IDE/" class="navigation navigation-next navigation-unique" aria-label="Next page: IDE">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
             
         
     </div>
@@ -263,7 +307,7 @@ gulp deploy
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2020-03-21T20:32:55.903Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-21T20:35:01.713Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"IDE","level":"1.2","depth":1,"path":"pages/IDE/README.md","ref":"pages/IDE/README.md","articles":[{"title":"VS Code","level":"1.2.1","depth":2,"path":"pages/IDE/VSCode.md","ref":"pages/IDE/VSCode.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2020-03-21T23:30:50.921Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-22T00:05:29.803Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -271,6 +315,10 @@ gulp deploy
         
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
     
         
         <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
