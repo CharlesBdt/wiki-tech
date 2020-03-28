@@ -209,8 +209,196 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="markdown">Markdown</h1>
-<h2 id="cheatsheet">Cheatsheet</h2>
+                                <h1 id="markdown-cheatsheet">Markdown Cheatsheet</h1>
+<p>Based on <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank">Markdown Cheatsheet</a></p>
+<ul>
+<li><a href="#headers">Headers</a></li>
+<li><a href="#emphasis">Emphasis</a></li>
+<li><a href="#lists">Lists</a></li>
+<li><a href="#links">Links</a></li>
+<li><a href="#images">Images</a></li>
+<li><a href="#code-and-syntax-highlighting">Code and Syntax Highlighting</a></li>
+<li><a href="#tables">Tables</a></li>
+<li><a href="#blockquotes">Blockquotes</a></li>
+<li><a href="#inline-html">Inline HTML</a></li>
+<li><a href="#horizontal-rule">Horizontal Rule</a></li>
+<li><a href="#line-breaks">Line Breaks</a></li>
+<li><a href="#youtube-videos">Youtube Videos</a></li>
+<li><a href="#mathematical-equations">Mathematical Equations</a></li>
+</ul>
+<h2 id="headers">Headers</h2>
+<pre><code class="lang-md"><span class="hljs-section"># H1</span>
+<span class="hljs-section">## H2</span>
+<span class="hljs-section">### H3</span>
+<span class="hljs-section">#### H4</span>
+<span class="hljs-section">##### H5</span>
+<span class="hljs-section">###### H6</span>
+
+<span class="hljs-section">Alt-H1
+======</span>
+
+<span class="hljs-section">Alt H2
+------</span>
+</code></pre>
+<h2 id="emphasis">Emphasis</h2>
+<pre><code class="lang-md">Emphasis - aka italics - with <span class="hljs-emphasis">*asterisks*</span> or <span class="hljs-emphasis">_underscores_</span>
+
+Strong emphasis - aka bold - with <span class="hljs-strong">**asterisks**</span> or <span class="hljs-strong">__underscores__</span>
+
+Combined emphasis with <span class="hljs-strong">**asterisks and _underscores_*</span>*.
+
+Strikethrough - aka crossed - with ~~tildes~~
+</code></pre>
+<h2 id="lists">Lists</h2>
+<pre><code class="lang-md">(In this example, leading and trailing spaces are shown with with dots: &#x22C5;)
+
+<span class="hljs-bullet">1. </span>First ordered list item
+<span class="hljs-bullet">2. </span>Another item
+&#x22C5;&#x22C5;* Unordered sub-list (2 spaces before asterisk)
+<span class="hljs-bullet">1. </span>Actual numbers don&apos;t matter, just that it&apos;s a number
+&#x22C5;&#x22C5;1. Ordered sub-list (2 spaces before the number)
+<span class="hljs-bullet">4. </span>And another item.
+
+&#x22C5;&#x22C5;&#x22C5;You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we&apos;ll use three here to also align the raw Markdown).
+
+&#x22C5;&#x22C5;&#x22C5;To have a line break without a paragraph, you will need to use two trailing spaces.&#x22C5;&#x22C5;
+&#x22C5;&#x22C5;&#x22C5;Note that this line is separate, but within the same paragraph.&#x22C5;&#x22C5;
+&#x22C5;&#x22C5;&#x22C5;(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+
+<span class="hljs-bullet">* </span>Unordered list can use asterisks
+<span class="hljs-bullet">- </span>Or minuses
+<span class="hljs-bullet">+ </span>Or pluses
+</code></pre>
+<h2 id="links">Links</h2>
+<pre><code class="lang-md">[<span class="hljs-string">I&apos;m an inline-style link</span>](<span class="hljs-link">https://www.google.com</span>)
+
+[<span class="hljs-string">I&apos;m an inline-style link with title</span>](<span class="hljs-link">https://www.google.com &quot;Google&apos;s Homepage&quot;</span>)
+
+[<span class="hljs-string">I&apos;m a reference-style link</span>][<span class="hljs-symbol">Arbitrary case-insensitive reference text</span>]
+
+[<span class="hljs-string">I&apos;m a relative reference to a repository file</span>](<span class="hljs-link">../blob/master/LICENSE</span>)
+
+[<span class="hljs-string">You can use numbers for reference-style link definitions</span>][<span class="hljs-symbol">1</span>]
+
+Or leave it empty and use the [link text itself].
+
+URLs and URLs in angle brackets will automatically get turned into links.
+http://www.example.com or <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">http:</span>//<span class="hljs-attr">www.example.com</span>&gt;</span></span> and sometimes
+example.com (but not on Github, for example).
+
+Some text to show that the reference links can follow later.
+
+[<span class="hljs-symbol">arbitrary case-insensitive reference text</span><span class="hljs-link">]: https://www.mozilla.org</span>
+[<span class="hljs-symbol">1</span><span class="hljs-link">]: http://slashdot.org</span>
+[<span class="hljs-symbol">link text itself</span><span class="hljs-link">]: http://www.reddit.com</span>
+
+----------------
+
+In a markdown file, H2 headers (with ##) will act as an anchor that you can use to generate menu like the one at the beginning of this file.
+
+<span class="hljs-section">## Links</span>
+or
+<span class="hljs-section">## Inline HTML</span>
+
+can be used in menu as
+
+<span class="hljs-bullet">- </span>[<span class="hljs-string">Links</span>](<span class="hljs-link">#links</span>)
+<span class="hljs-bullet">- </span>[<span class="hljs-string">Inline HTML</span>](<span class="hljs-link">#inline-html</span>)
+
+By clicking this link you will be send to the proper section
+</code></pre>
+<h2 id="images">Images</h2>
+<pre><code class="lang-md">Here&apos;s a logo (hover to see the title text):
+
+Inline-style:
+![<span class="hljs-string">alt text</span>](<span class="hljs-link">https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png &quot;Logo Title Text 1&quot;</span>)
+
+Reference-style:
+![<span class="hljs-string">alt text</span>][<span class="hljs-symbol">logo</span>]
+
+[<span class="hljs-symbol">logo</span><span class="hljs-link">]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png &quot;Logo Title Text 2&quot;</span>
+</code></pre>
+<h2 id="code-and-syntax-highlighting">Code and Syntax Highlighting</h2>
+<pre><code class="lang-md">Inline <span class="hljs-code">`code`</span> has <span class="hljs-code">`back-ticks around`</span> it.
+</code></pre>
+<p>Blocks of code are either fenced by lines with three back-ticks ```, or are indented with four spaces. I recommend only using the fenced code blocks -- they&apos;re easier and only they support syntax highlighting.</p>
+<pre><code class="lang-md">javascript or js
+<span class="hljs-code">```</span>javascript
+
+python or py
+<span class="hljs-code">```</span>python
+
+markdown
+<span class="hljs-code">```</span>md
+
+Meaning languages are supported, just try it and see what happens
+You can specify no language to highlight brut text
+</code></pre>
+<h2 id="tables">Tables</h2>
+<pre><code class="lang-md">Colons can be used to align columns.
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+There must be at least 3 dashes separating each header cell.
+The outer pipes (|) are optional, and you don&apos;t need to make the
+raw Markdown line up prettily. You can also use inline Markdown.
+
+Markdown | Less | Pretty
+--- | --- | ---
+<span class="hljs-emphasis">*Still*</span> | <span class="hljs-code">`renders`</span> | <span class="hljs-strong">**nicely**</span>
+1 | 2 | 3
+</code></pre>
+<h2 id="blockquotes">Blockquotes</h2>
+<pre><code class="lang-md"><span class="hljs-quote">&gt; Blockquotes are very handy in email to emulate reply text.</span>
+<span class="hljs-quote">&gt; This line is part of the same quote.</span>
+
+Quote break.
+
+<span class="hljs-quote">&gt; This is a very long line that will still be quoted properly when it wraps. Oh boy let&apos;s keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote</span>
+</code></pre>
+<h2 id="inline-html">Inline HTML</h2>
+<pre><code class="lang-md">You can also use raw HTML in your Markdown, and it&apos;ll mostly work pretty well.
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">dl</span>&gt;</span></span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span></span>Definition list<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span></span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span></span>Is something people use sometimes.<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span></span>
+
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span></span>Markdown in HTML<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span></span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span></span>Does <span class="hljs-emphasis">*not*</span> work <span class="hljs-strong">**very**</span> well. Use HTML <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span></span>tags<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span></span>.<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span></span>
+<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span></span>
+</code></pre>
+<h2 id="horizontal-rule">Horizontal Rule</h2>
+<pre><code class="lang-md">Hyphens ---
+
+Asterisks <span class="hljs-emphasis">***</span>
+
+Underscores <span class="hljs-emphasis">___</span>
+</code></pre>
+<h2 id="line-breaks">Line breaks</h2>
+<p>My basic recommendation for learning how line breaks work is to experiment and discover -- hit &lt; Enter &gt; once (i.e., insert one newline), then hit it twice (i.e., insert two newlines), see what happens. You&apos;ll soon learn to get what you want.</p>
+<p>Here are some things to try out:</p>
+<pre><code class="lang-md">Here&apos;s a line for us to start with.
+
+This line is separated from the one above by two newlines, so it will be a <span class="hljs-emphasis">*separate paragraph*</span>.
+
+This line is also a separate paragraph, but...
+This line is only separated by a single newline, so it&apos;s a separate line in the <span class="hljs-emphasis">*same paragraph*</span>.
+</code></pre>
+<h2 id="youtube-videos">Youtube Videos</h2>
+<p>They can&apos;t be added directly but you can add an image with a link to the video like this:</p>
+<pre><code class="lang-md"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;http://www.youtube.com/watch?feature=player_embedded&amp;v=YOUTUBE_VIDEO_ID_HERE
+&quot;</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_blank&quot;</span>&gt;</span></span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg&quot;</span>
+<span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;IMAGE ALT TEXT HERE&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;240&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;180&quot;</span> <span class="hljs-attr">border</span>=<span class="hljs-string">&quot;10&quot;</span> /&gt;</span></span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span>
+</code></pre>
+<p>Or, in pure Markdown, but losing the image sizing and border:</p>
+<pre><code class="lang-md">[<span class="hljs-string">![IMAGE ALT TEXT HERE</span>](<span class="hljs-link">http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg</span>)](<span class="hljs-link">http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE</span>)
+</code></pre>
+<h2 id="mathematical-equations">Mathematical Equations</h2>
+<p>Not supported everywhere but you can play with this <a href="https://www.codecogs.com/latex/eqneditor.php" target="_blank">sandbox</a></p>
 
                                 
                                 </section>
@@ -250,7 +438,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Markdown","level":"1.3.1","depth":2,"previous":{"title":"Language","level":"1.3","depth":1,"path":"pages/language/README.md","ref":"pages/language/README.md","articles":[{"title":"Markdown","level":"1.3.1","depth":2,"path":"pages/language/markdown.md","ref":"pages/language/markdown.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/language/markdown.md","mtime":"2020-03-22T00:14:19.290Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-28T14:17:18.638Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Markdown","level":"1.3.1","depth":2,"previous":{"title":"Language","level":"1.3","depth":1,"path":"pages/language/README.md","ref":"pages/language/README.md","articles":[{"title":"Markdown","level":"1.3.1","depth":2,"path":"pages/language/markdown.md","ref":"pages/language/markdown.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/language/markdown.md","mtime":"2020-03-28T16:50:47.147Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-28T16:51:19.002Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
