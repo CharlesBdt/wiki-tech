@@ -102,16 +102,22 @@ gitbook server
 # Or create the build
 gitbook build
 
-# Both will make sure that the _books folder is updated
+# Both will make sure that the .publish is updated to serve the Gitbook
 
-# It will automatically push the GitBook build to the gh_pages branch, based on your current branch
-# So don't forger to commit and push your files to your remote branch
+# So don't forget to commit and push your files to your remote branch
 git add .
 git commit -m <commit_message>
 git push origin <current_branch_name>
 
 # Publish it online
 gulp deploy
+
+# The script will :
+#  - Clone the repo
+#  - Checkout branch gh-pages
+#  - Update repo
+#  - Copy files to repository (based on .publish)
+#  - Deploy it on Github pages
 
 # Check it online at https://<github_username>.github.io/<repository_name>
 
