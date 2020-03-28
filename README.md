@@ -104,14 +104,14 @@ gitbook build
 
 # Both will make sure that the _books folder is updated
 
-# Publish it online
-gulp deploy
-
-# It will automatically push the GitBook build to the gh_pages branch based on your current local active branch
-# So don't forger to commit and push your files to your remote branch as well
+# It will automatically push the GitBook build to the gh_pages branch, based on your current branch
+# So don't forger to commit and push your files to your remote branch
 git add .
 git commit -m <commit_message>
 git push origin <current_branch_name>
+
+# Publish it online
+gulp deploy
 
 # Check it online at https://<github_username>.github.io/<repository_name>
 
