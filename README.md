@@ -97,7 +97,7 @@ gulp.task('deploy', () => {
 
 ```sh
 # Run locally
-gitbook server
+gitbook serve
 
 # Or create the build
 gitbook build
