@@ -29,6 +29,22 @@ c = --a; // c equals 4 and a equals 4
 - Note : Array.prototype does not refer to a single array, but to the Array() object itself.
 - Note : Prototype is a global object constructor which is available for all JavaScript objects.
 
+Array are just special object, u can add key / value to them
+
+```javascript
+const arr = ['a', 'b', 'c'];
+arr.test = 'bad';
+
+for (let i in arr) {
+  console.log(arr[i]);
+}
+
+// a
+// b
+// c
+// bad
+```
+
 ### Array doc
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
@@ -113,20 +129,32 @@ obj4.name = 'Daniels';
 
 ## Loops
 
-- forEach()
-  - iterate only over arrays / maps / sets
+### forEach()
+
+- iterates only over Arrays / Maps / Sets
+- Can easily log the key and value
+- Skip empty / undefined element
+- Can't use async / await
 
 ```javascript
 const arr = [1,2,3,4];
 
-arr.forEach((element) => {
-    console.log(element);
+arr.forEach((element, index) => {
+    console.log(element, index);
 });
+
+// 1 0
+// 2 1
+// 3 2
+// 4 3
 ```
 
-- for (.. of ..)
-  - iterate over the values in an iterable
-  - Array / Map / Set / String / TypedArray
+### for (.. of ..)
+
+- Iterate over the values in an iterable
+- Array / Map / Set / String / TypedArray
+- Doesn't skip empty / undefined array elements
+- Can use async / await
 
 ```javascript
 let names = ['John', 'Bob', 'Marie'];
@@ -138,10 +166,52 @@ for (let name of names) {
 // John
 // Bob
 // Marie
+
+for (let [i, n] of names.entries()) {
+  console.log(i, n);
+}
+
+// 0 John
+// 1 Bob
+// 2 Marie
+
+-------------
+
+let obj = {a: '1', b: '2', c: '3'};
+
+for (let o in obj) {
+  console.log(o, obj[o]);
+}
+
+// a 1
+// b 2
+// c 3
 ```
 
-- for (.. in ..)
-  - iterate over the property of an objet or an array
+### for (.. in ..)
+
+- Iterates over the properties (keys) of an Objet or an Array
+- Skip empty / undefined array elements
+
+**Note** : for...in should not be used to iterate over an Array.
+It's generally a bad pratice unless you want to iterate over non-numeric keys and inherited keys.
+
+```javascript
+const arr = ['a', 'b', 'c'];
+arr.test = 'bad';
+
+// Prints "a, b, c, bad"
+for (let i in arr) {
+  console.log(arr[i]);
+}
+
+// Prints "a, b, c"
+for (let el of arr) {
+  console.log(el);
+}
+```
+
+  for...in actually iterates through the enumerable properties of an object/array. That means the properties that exist in the array, so the x that goes in object[x] or array[x]. For arrays, that’s the index. For objects, they’re the keys (not the values).
 
 ```javascript
 let oldCar = {
@@ -167,4 +237,27 @@ for (let index in str) {
 
 // Index of T: 0
 // Index of u: 1
+
+----------
+
+let arr = [
+  'Mike',
+  'Steven'
+];
+
+for (var i in arr) {
+  console.log(i, arr[i]);
+}
+
+// 0 Mike
+// 1 Steven
+
 ```
+
+### To summarize
+
+**Arrays** : use for...of if you don’t care about index value. I like to use forEach for all my iterations though — no refactoring needed if I ever decide I do need the index value.
+
+**Objects** : use for...of if you don’t care about key value; Object.keys() if you do (and use obj[key] to get the value in the for...of).
+
+**Everything** : use lodash if it is a possibility. There’s a reason it’s the most downloaded and depended-on library on NPM.
