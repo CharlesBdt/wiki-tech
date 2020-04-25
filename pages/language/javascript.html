@@ -1,0 +1,557 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>JavaScript · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="markdown.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../config/">
+            
+                <a href="../config/">
+            
+                    
+                    Config
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../config/vscode.html">
+            
+                <a href="../config/vscode.html">
+            
+                    
+                    VS Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Language
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="javascript.html">
+            
+                <a href="javascript.html">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="markdown.html">
+            
+                <a href="markdown.html">
+            
+                    
+                    Markdown
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >JavaScript</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="javascript">JavaScript</h1>
+<ul>
+<li><a href="#advanced-operators">Advanced Operators</a></li>
+<li><a href="#array-=-[]">Array = []</a></li>
+<li><a href="#object-=-%7B%7D">Object = {}</a></li>
+<li><a href="#mutable-/-immutable-types">Mutable / Immutable types</a></li>
+<li><a href="#loops">Loops</a></li>
+</ul>
+<h2 id="advanced-operators">Advanced Operators</h2>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> a = <span class="hljs-number">5</span>;
+c = a++; <span class="hljs-comment">// c equals 5 and a equals 6</span>
+c = ++a; <span class="hljs-comment">// c equals 6 and a equals 6</span>
+
+c = a--; <span class="hljs-comment">// c equals 5 and a equals 4</span>
+c = --a; <span class="hljs-comment">// c equals 4 and a equals 4</span>
+</code></pre>
+<h2 id="array--">Array = []</h2>
+<blockquote>
+<p>The Array object is used to store multiple values in a single variable</p>
+</blockquote>
+<h3 id="prototype">Prototype</h3>
+<ul>
+<li>The prototype constructor allows you to add new properties and methods to the Array() object.</li>
+<li>When constructing a property, ALL arrays will be given the property, and its value, as default.</li>
+<li>When constructing a method, ALL arrays will have this method available.</li>
+<li>Note : Array.prototype does not refer to a single array, but to the Array() object itself.</li>
+<li>Note : Prototype is a global object constructor which is available for all JavaScript objects.</li>
+</ul>
+<p>Array are just special object, u can add key / value to them</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> arr = [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>];
+arr.test = <span class="hljs-string">&apos;bad&apos;</span>;
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i <span class="hljs-keyword">in</span> arr) {
+  <span class="hljs-built_in">console</span>.log(arr[i]);
+}
+
+<span class="hljs-comment">// a</span>
+<span class="hljs-comment">// b</span>
+<span class="hljs-comment">// c</span>
+<span class="hljs-comment">// bad</span>
+</code></pre>
+<h3 id="array-doc">Array doc</h3>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array</a></p>
+<h2 id="object--">Object = {}</h2>
+<blockquote>
+<p>The JS Object is used to store key:value pairs</p>
+</blockquote>
+<h3 id="object-doc">Object doc</h3>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object</a></p>
+<h2 id="mutable--immutable-types">Mutable / Immutable types</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Mutable</th>
+<th style="text-align:center">Immutable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Objects</td>
+<td style="text-align:center">Numbers</td>
+</tr>
+<tr>
+<td style="text-align:center">Array</td>
+<td style="text-align:center">String</td>
+</tr>
+<tr>
+<td style="text-align:center">Functions</td>
+<td style="text-align:center">Null</td>
+</tr>
+<tr>
+<td style="text-align:center">Classes</td>
+<td style="text-align:center">Undefined</td>
+</tr>
+<tr>
+<td style="text-align:center">Maps</td>
+<td style="text-align:center">Boolean</td>
+</tr>
+<tr>
+<td style="text-align:center">Sets</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Mutable example</span>
+
+<span class="hljs-keyword">const</span> car1 = {
+  color: <span class="hljs-string">&apos;red&apos;</span>,
+  tyres: <span class="hljs-number">4</span>
+}
+<span class="hljs-keyword">const</span> car2 = car1;
+<span class="hljs-comment">// car2 =&gt; { color: &apos;red&apos;, tyres: 4 }</span>
+
+car1.color = <span class="hljs-string">&apos;blue&apos;</span>;
+car2.doors = <span class="hljs-number">3</span>;
+<span class="hljs-comment">// car1 =&gt; { color: &apos;blue&apos;, tyres: 4, doors: 3 }</span>
+<span class="hljs-comment">// car2 =&gt; { color: &apos;blue&apos;, tyres: 4, doors: 3 }</span>
+<span class="hljs-comment">// car1 === car2 =&gt; true</span>
+</code></pre>
+<p>Objects are never copied. They are passed around by reference.</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Immutable example</span>
+
+<span class="hljs-keyword">let</span> aString = <span class="hljs-string">&apos;string a&apos;</span>;
+<span class="hljs-keyword">const</span> bString = aString;
+<span class="hljs-comment">// bString =&gt; &quot;string a&quot;</span>
+
+aString = <span class="hljs-string">&apos;string a bis&apos;</span>;
+<span class="hljs-comment">// aString =&gt; &apos;string a bis&apos;</span>
+<span class="hljs-comment">// bString =&gt; &apos;string a&apos;</span>
+<span class="hljs-comment">// aString === bString =&gt; false</span>
+</code></pre>
+<p>When you modify a string, a whole new string is created, and the name of
+the variable assigned to its memory reference. There&#x2019;s no way of changing
+the internal state of an immutable type, so the variable simply gets
+reassigned to a new reference. Same goes for numbers.</p>
+<p>By modifying string or number in a function, it will only persist within
+the function scope. The initial values do not get altered.</p>
+<p>This will not be the case for arrays and objects.
+This is because they are mutable. Their variables are by reference, they
+are changed globally.</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Create immutable object</span>
+
+<span class="hljs-keyword">let</span> obj4 = { name: <span class="hljs-string">&apos;James&apos;</span> }
+<span class="hljs-keyword">const</span> obj5 = obj4;
+
+<span class="hljs-built_in">Object</span>.freeze(obj4);
+<span class="hljs-comment">// obj4 =&gt; { name: &apos;James&apos; }</span>
+<span class="hljs-comment">// obj5 =&gt; { name: &apos;James&apos; }</span>
+
+obj4.name = <span class="hljs-string">&apos;Daniels&apos;</span>;
+<span class="hljs-comment">// obj4 =&gt; { name: &apos;James&apos; }</span>
+<span class="hljs-comment">// obj5 =&gt; { name: &apos;James&apos; }</span>
+</code></pre>
+<h2 id="loops">Loops</h2>
+<h3 id="foreach">forEach()</h3>
+<ul>
+<li>iterates only over Arrays / Maps / Sets</li>
+<li>Can easily log the key and value</li>
+<li>Skip empty / undefined element</li>
+<li>Can&apos;t use async / await</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> arr = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>];
+
+arr.forEach((element, index) =&gt; {
+    <span class="hljs-built_in">console</span>.log(element, index);
+});
+
+<span class="hljs-comment">// 1 0</span>
+<span class="hljs-comment">// 2 1</span>
+<span class="hljs-comment">// 3 2</span>
+<span class="hljs-comment">// 4 3</span>
+</code></pre>
+<h3 id="for--of-">for (.. of ..)</h3>
+<ul>
+<li>Iterate over the values in an iterable</li>
+<li>Array / Map / Set / String / TypedArray</li>
+<li>Doesn&apos;t skip empty / undefined array elements</li>
+<li>Can use async / await</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> names = [<span class="hljs-string">&apos;John&apos;</span>, <span class="hljs-string">&apos;Bob&apos;</span>, <span class="hljs-string">&apos;Marie&apos;</span>];
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> name <span class="hljs-keyword">of</span> names) {
+    <span class="hljs-built_in">console</span>.log(name);
+}
+
+<span class="hljs-comment">// John</span>
+<span class="hljs-comment">// Bob</span>
+<span class="hljs-comment">// Marie</span>
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> [i, n] <span class="hljs-keyword">of</span> names.entries()) {
+  <span class="hljs-built_in">console</span>.log(i, n);
+}
+
+<span class="hljs-comment">// 0 John</span>
+<span class="hljs-comment">// 1 Bob</span>
+<span class="hljs-comment">// 2 Marie</span>
+
+-------------
+
+<span class="hljs-keyword">let</span> obj = {a: <span class="hljs-string">&apos;1&apos;</span>, b: <span class="hljs-string">&apos;2&apos;</span>, c: <span class="hljs-string">&apos;3&apos;</span>};
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> o <span class="hljs-keyword">in</span> obj) {
+  <span class="hljs-built_in">console</span>.log(o, obj[o]);
+}
+
+<span class="hljs-comment">// a 1</span>
+<span class="hljs-comment">// b 2</span>
+<span class="hljs-comment">// c 3</span>
+</code></pre>
+<h3 id="for--in-">for (.. in ..)</h3>
+<ul>
+<li>Iterates over the properties (keys) of an Objet or an Array</li>
+<li>Skip empty / undefined array elements</li>
+</ul>
+<p><strong>Note</strong> : for...in should not be used to iterate over an Array.
+It&apos;s generally a bad pratice unless you want to iterate over non-numeric keys and inherited keys.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> arr = [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>];
+arr.test = <span class="hljs-string">&apos;bad&apos;</span>;
+
+<span class="hljs-comment">// Prints &quot;a, b, c, bad&quot;</span>
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i <span class="hljs-keyword">in</span> arr) {
+  <span class="hljs-built_in">console</span>.log(arr[i]);
+}
+
+<span class="hljs-comment">// Prints &quot;a, b, c&quot;</span>
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> el <span class="hljs-keyword">of</span> arr) {
+  <span class="hljs-built_in">console</span>.log(el);
+}
+</code></pre>
+<p>  for...in actually iterates through the enumerable properties of an object/array. That means the properties that exist in the array, so the x that goes in object[x] or array[x]. For arrays, that&#x2019;s the index. For objects, they&#x2019;re the keys (not the values).</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> oldCar = {
+  make: <span class="hljs-string">&apos;Toyota&apos;</span>,
+  model: <span class="hljs-string">&apos;Tercel&apos;</span>,
+  year: <span class="hljs-string">&apos;1996&apos;</span>
+};
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> key <span class="hljs-keyword">in</span> oldCar) {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`<span class="hljs-subst">${key}</span> --&gt; <span class="hljs-subst">${oldCar[key]}</span>`</span>);
+}
+
+<span class="hljs-comment">// make --&gt; Toyota</span>
+<span class="hljs-comment">// model --&gt; Tercel</span>
+
+-----------
+
+<span class="hljs-keyword">let</span> str = <span class="hljs-string">&apos;Turn the page&apos;</span>;
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> index <span class="hljs-keyword">in</span> str) {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Index of <span class="hljs-subst">${str[index]}</span>: <span class="hljs-subst">${index}</span>`</span>);
+}
+
+<span class="hljs-comment">// Index of T: 0</span>
+<span class="hljs-comment">// Index of u: 1</span>
+
+----------
+
+<span class="hljs-keyword">let</span> arr = [
+  <span class="hljs-string">&apos;Mike&apos;</span>,
+  <span class="hljs-string">&apos;Steven&apos;</span>
+];
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i <span class="hljs-keyword">in</span> arr) {
+  <span class="hljs-built_in">console</span>.log(i, arr[i]);
+}
+
+<span class="hljs-comment">// 0 Mike</span>
+<span class="hljs-comment">// 1 Steven</span>
+</code></pre>
+<h3 id="to-summarize">To summarize</h3>
+<p><strong>Arrays</strong> : use for...of if you don&#x2019;t care about index value. I like to use forEach for all my iterations though &#x2014; no refactoring needed if I ever decide I do need the index value.</p>
+<p><strong>Objects</strong> : use for...of if you don&#x2019;t care about key value; Object.keys() if you do (and use obj[key] to get the value in the for...of).</p>
+<p><strong>Everything</strong> : use lodash if it is a possibility. There&#x2019;s a reason it&#x2019;s the most downloaded and depended-on library on NPM.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Language">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="markdown.html" class="navigation navigation-next " aria-label="Next page: Markdown">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"JavaScript","level":"1.3.1","depth":2,"next":{"title":"Markdown","level":"1.3.2","depth":2,"path":"pages/language/markdown.md","ref":"pages/language/markdown.md","articles":[]},"previous":{"title":"Language","level":"1.3","depth":1,"path":"pages/language/README.md","ref":"pages/language/README.md","articles":[{"title":"JavaScript","level":"1.3.1","depth":2,"path":"pages/language/javascript.md","ref":"pages/language/javascript.md","articles":[]},{"title":"Markdown","level":"1.3.2","depth":2,"path":"pages/language/markdown.md","ref":"pages/language/markdown.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/language/javascript.md","mtime":"2020-04-25T22:54:18.207Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-25T23:46:04.028Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
